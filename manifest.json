@@ -1,22 +1,37 @@
 {
   "name": "AI Blocker",
   "version": "1.0",
-  "description": "Redirects requests from AI-related websites.",
+  "description": "Redirects requests from AI-related websites to prevent use of generative AI.",
   "manifest_version": 3,
-  "permissions": ["tabs", "webNavigation"],
-  "host_permissions": [
-    "*://chat.openai.com/*",
-    "*://chatgpt.com/*",
-    "*://gemini.google.com/*",
-    "*://www.midjourney.com/*",
-    "*://stability.ai/*",
-    "*://www.notion.com/*",
-    "*://www.anyword.com/*",
-    "*://openai.com/*",
-    "*://elevenlabs.io/*",
-    "*://www.anthropic.com/*"
-  ],
-  "background": {
-    "service_worker": "background.js"
-  }
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chat.openai.com/*",
+        "*://chatgpt.com/*",
+        "*://gemini.google.com/*",
+        "*://www.midjourney.com/*",
+        "*://stability.ai/*",
+        "*://www.notion.com/*",
+        "*://www.anyword.com/*",
+        "*://openai.com/*",
+        "*://elevenlabs.io/*",
+        "*://www.anthropic.com/*",
+        "*://labs.openai.com/*",
+        "*://www.perplexity.ai/*",
+        "*://claude.ai/*",
+        "*://chat.deepseek.com/",
+        "*://www.ada.cx/",
+        "*://grok.com/",
+        "*://www.llama.com/",
+        "*://mistral.ai/",
+        "*://creator.nightcafe.studio/"
+      ],
+      "js": ["redirect.js"]
+    },
+    {
+      "matches": ["*://search.brave.com/*"],
+      "js": ["preventOverview.js"]
+    }
+  ]
 }
