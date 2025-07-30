@@ -1,0 +1,11 @@
+{
+  "name": "AI Blocker",
+  "version": "1.0.0",
+  "description": "Blocks the user from accessing any generative AI sites",
+  "manifest_version": 3,
+  "author": "Dalton",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "AI Blocker"
+  }
+}
