@@ -1,11 +1,22 @@
 {
   "name": "AI Blocker",
-  "version": "1.0.0",
-  "description": "Blocks the user from accessing any generative AI sites",
+  "version": "1.0",
+  "description": "Redirects requests from AI-related websites.",
   "manifest_version": 3,
-  "author": "Dalton",
-  "action": {
-    "default_popup": "index.html",
-    "default_title": "AI Blocker"
+  "permissions": ["tabs", "webNavigation"],
+  "host_permissions": [
+    "*://chat.openai.com/*",
+    "*://chatgpt.com/*",
+    "*://gemini.google.com/*",
+    "*://www.midjourney.com/*",
+    "*://stability.ai/*",
+    "*://www.notion.com/*",
+    "*://www.anyword.com/*",
+    "*://openai.com/*",
+    "*://elevenlabs.io/*",
+    "*://www.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
 }
