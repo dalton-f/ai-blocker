@@ -33,11 +33,13 @@
         "*://mistral.ai/",
         "*://creator.nightcafe.studio/"
       ],
-      "js": ["redirect.js"]
+      "js": ["redirect.js"],
+      "run_at": "document_start"
     },
     {
-      "matches": ["*://search.brave.com/*", "*://www.google.com/search/*"],
-      "js": ["preventOverview.js"]
+      "matches": ["*://search.brave.com/*", "*://*.google.com/search*"],
+      "js": ["preventOverview.js"],
+      "run_at": "document_start"
     }
   ]
 }
