@@ -1,12 +1,20 @@
-const patterns = [/ai overview/i];
+let hiddenAiLabel = null;
 
 const observer = new MutationObserver(() => {
   // Handles Google
-  const hiddenAiLabel = [...document.querySelectorAll("h1, h2")].find((e) =>
-    patterns.some((pattern) => pattern.test(e.innerText))
-  );
+  const headings = document.querySelectorAll("h1, h2");
+
+  // Search for the hidden AI label to find the correct container to hide
+  for (const heading of headings) {
+    if (heading.innerText === "AI overview") hiddenAiLabel = heading;
+  }
 
   if (hiddenAiLabel) hiddenAiLabel.parentNode.style.display = "none";
+
+  // Hides sponsored sites if an ad-blocker doesn't already
+  const sponsoredSites = document.getElementById("tads");
+
+  if (sponsoredSites) sponsoredSites.style.display = "none";
 
   // Handles Brave Browser
   const aiOverview = document.getElementById("llm-snippet");
