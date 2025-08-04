@@ -1,7 +1,7 @@
 {
   "name": "AI Blocker",
   "version": "1.0",
-  "description": "Redirects requests from AI-related websites to prevent use of generative AI.",
+  "description": "Blocks Google LLM snippets, hides sponsored search results, and prevents use of generative AI websites",
   "manifest_version": 3,
   "icons": {
     "16": "icons/icon16.jpeg",
@@ -9,7 +9,6 @@
     "48": "icons/icon48.jpeg",
     "128": "icons/icon128.jpeg"
   },
-  "permissions": ["scripting", "activeTab"],
   "content_scripts": [
     {
       "matches": [
