@@ -42,6 +42,11 @@ const observer = new MutationObserver(() => {
     const anchor = aiModeTab.closest("a");
     anchor.style.display = "none";
   }
+
+  // Hide "People also ask" section
+  let peopleAlsoAskQuestions = document.querySelector("[data-initq]");
+
+  if (peopleAlsoAskQuestions) peopleAlsoAskQuestions.style.display = "none";
 });
 
 observer.observe(document, {
