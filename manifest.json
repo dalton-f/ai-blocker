@@ -1,7 +1,7 @@
 {
   "name": "AI Blocker",
   "version": "1.0",
-  "description": "Blocks Google LLM snippets, hides sponsored search results, and prevents use of generative AI websites",
+  "description": "Filter Google search results to hide AI overviews, sponsored ads, and more",
   "manifest_version": 3,
   "icons": {
     "16": "icons/icon16.jpeg",
