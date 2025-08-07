@@ -1,3 +1,15 @@
+const patterns = [
+  /ai overview/i, // en
+  /Aperçu IA/i, // fr
+  /Resumen creado con IA/i, // es
+  /Vista geral da IA/i, // pt
+  /Обзор, сгенерированный искусственным интеллектом/i, // ru,
+  /Übersicht mit KI/i, // de
+  /Přehled od AI/i, // cz
+  /AI による概要/i, // jp
+  /AI 개요/i, // kr
+];
+
 let hiddenAiLabel = null;
 let aiModeTab = null;
 
@@ -7,8 +19,12 @@ const observer = new MutationObserver(() => {
 
   // Search for the hidden AI label to find the correct container to hide
   for (const heading of headings) {
-    if (heading.innerText.toLowerCase() === "ai overview")
-      hiddenAiLabel = heading;
+    for (const pattern of patterns) {
+      if (pattern.test(heading.innerText)) {
+        hiddenAiLabel = heading;
+        break;
+      }
+    }
   }
 
   if (hiddenAiLabel) {
