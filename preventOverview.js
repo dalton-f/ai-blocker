@@ -7,7 +7,8 @@ const observer = new MutationObserver(() => {
 
   // Search for the hidden AI label to find the correct container to hide
   for (const heading of headings) {
-    if (heading.innerText === "AI overview") hiddenAiLabel = heading;
+    if (heading.innerText.toLowerCase() === "ai overview")
+      hiddenAiLabel = heading;
   }
 
   if (hiddenAiLabel) {
