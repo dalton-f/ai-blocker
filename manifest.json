@@ -416,5 +416,12 @@
       "js": ["preventOverview.js"],
       "run_at": "document_start"
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "AI_Blocker@daltonf.dev",
+      "strict_min_version": "58.0"
+    },
+    "gecko_android": {}
+  }
 }
