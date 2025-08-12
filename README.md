@@ -8,8 +8,15 @@ This extension also has features which redirect users away from any of the most 
 
 ## Installation
 
-### From Chrome Web Store (NOT YET PUBLISHED)
+### From Chrome Web Store
 
-1. Download the extension from the chrome webstore: [AI Blocker]()
+1. Download the extension from the chrome webstore: [AI Blocker](https://chromewebstore.google.com/detail/ai-blocker/facdafkajoefgohbeaoekodeemffmlhi?authuser=0&hl=en-GB)
 2. Add it to your browser by clicking on 'Add to Chrome'.
+3. Once installed, the extension will automatically activate, and you will see AI overviews removed from your search results.
+4. If you use OperaGX, you may have to go into the extensions settings and make sure it explicitly has permissions for it to work
+
+### From Firefox Add-Ons
+
+1. Download the extension from the firefox webstore: [AI Blocker](https://addons.mozilla.org/en-US/firefox/addon/google-ai-blocker/)
+2. Add it to your browser by clicking on 'Add to Firefox'.
 3. Once installed, the extension will automatically activate, and you will see AI overviews removed from your search results.
